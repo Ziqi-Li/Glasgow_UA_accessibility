@@ -1,0 +1,7 @@
+docker run -t -v "${PWD}:/data/" osrm/osrm-backend osrm-extract -p /opt/foot.lua /data/scotland-latest.osm.pbf
+
+docker run -t -v "${PWD}:/data/" osrm/osrm-backend osrm-partition /data/scotland-latest.osrm
+
+docker run -t -v "${PWD}:/data/" osrm/osrm-backend osrm-customize /data/scotland-latest.osrm
+
+docker run --name osrm -t -i -p 4000:5000 -v "${PWD}:/data/" osrm/osrm-backend osrm-routed --algorithm mld /data/scotland-latest.osrm --max-table-size 1000
