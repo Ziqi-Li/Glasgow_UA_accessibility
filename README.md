@@ -1,4 +1,4 @@
-# Glasgow_UA_accessibility
+# Equalising Urban Agriculture Access in Glasgow: A Spatial Optimization Approach
 Data and code repo for the manuscript
 
 - *Data*: data folder used in the anlaysis
